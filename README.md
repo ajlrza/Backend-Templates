@@ -5,6 +5,7 @@
 * Waitlister API in TypeScript
 * Key-Val DB API in Python with LMDB
 * State Queue in Python with asyncio
+* Type Validator Script in TypeScript
 
 # Custom LMDB Script
 
@@ -51,3 +52,17 @@ Storage: File-based partition pool
 Features: Bounded hypervisor buffer (max 100), priority-tagged partitions (HIGH / MEDIUM / LOW) with UP / DOWN status, observed / unobserved / misc state channels, CPU core-level detection, buffer-drain monitor
 
 Use case: Game & App State Syncing, Background Job Queues, Event / Telemetry Buffering
+
+# Type Validator Script
+
+A lightweight TypeScript runtime validation layer that checks incoming payloads before they reach application logic. It provides small, composable validator classes for strings, numbers, booleans, objects and records, plus a nullable wrapper that lets any validator also accept `null`. On top of these, it checks a main payload (state, avatar, position and world data), the linker references between those states, and optional extension payloads, both one at a time and as a full record. Each check returns a per-field map of pass/fail results instead of a single boolean, so you can see exactly which part of a payload failed. Field and type names are left as `REPLACETYPE` / `REPLACETYPEEXT` placeholders so you can map the validator to your own schema.
+
+# Tech Stack
+
+Language: ```TypeScript```
+
+Dependencies: ```None (zero-dependency, native typeof checks)```
+
+Features: ```Composable validator classes, nullable validator wrapper, grouped string/number/object/linker checks, single and batch extension-payload validation, per-field result maps, placeholder-based schema mapping```
+
+Use case: ```Game & App State Validation, API Request Payload Checks, Multiplayer / Real-time Data Sanitizing```
