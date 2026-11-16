@@ -10,6 +10,7 @@
 * Custom LMDB Script (Python)
 * Type Validator Script (TypeScript)
 * JSON Slotter Script (Python)
+* Experimental Caching Script
 
 # Custom LMDB Script
 
@@ -108,3 +109,14 @@ Sample Schema:
     },
 }
 ```
+
+# Experimental Caching Script
+
+A specialized Python utility that maps cache states into a complex vector space (HilbertSpace). It uses NumPy for complex vector operations, applies Hadamard matrix transformations, linear combinations, and operation tagging based on sequential cache metadata, optimized with Numba JIT decorators.
+
+Tech Stack:
+
+* Language: ```Python```
+* Dependencies: ```numpy, numba, random```
+* Features: ```Complex number vector representation (`np.complex128`), Numba-accelerated mathematical pipelines (`@numba.jit`), Hadamard matrix operations, randomized vector ID mapping```
+* Use case: ```AI State Vector Processing, Quantum-Inspired Data Modelling, Vector-Space Caching```
