@@ -66,3 +66,31 @@ Dependencies: ```None (zero-dependency, native typeof checks)```
 Features: ```Composable validator classes, nullable validator wrapper, grouped string/number/object/linker checks, single and batch extension-payload validation, per-field result maps, placeholder-based schema mapping```
 
 Use case: ```Game & App State Validation, API Request Payload Checks, Multiplayer / Real-time Data Sanitizing```
+
+
+# JSON Slotter Script
+
+
+
+Sample Schema:
+
+```json
+{
+   "slots_status": {
+        "1": "Inactive",
+        "2": "Inactive",
+        "3": "Inactive",
+        "4": "Inactive",
+        "5": "Inactive",
+    },
+    "slot_two_thousand_six_hundred_seventy_three": {
+        "previously_slotted": false,
+        "REPLACE": {
+            "user_interaction": {},
+            "ai_interaction": {},
+            "date": "",
+            "time": ""
+        }
+    },
+}
+```
