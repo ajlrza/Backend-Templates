@@ -1,11 +1,15 @@
-# Backend API templates in TypeScript and Python
+# TypeScript & Python Backend Toolkit
 
 > These were part of my previous projects that I didn't decide to continue, my intention is that they can be re-used for your projects.
 
-* Waitlister API in TypeScript
-* Key-Val DB API in Python with LMDB
-* State Queue in Python with asyncio
-* Type Validator Script in TypeScript
+## Mini-Projects (Subsystems & Backends)
+* Waitlister API (TypeScript / Hono)
+* State Queue (Python / asyncio)
+
+## Scripts (Plug-and-Play Utilities)
+* Custom LMDB Script (Python)
+* Type Validator Script (TypeScript)
+* JSON Slotter Script (Python)
 
 # Custom LMDB Script
 
@@ -70,6 +74,16 @@ Use case: ```Game & App State Validation, API Request Payload Checks, Multiplaye
 
 # JSON Slotter Script
 
+A lightweight Python utility that manages dynamic JSON-based memory slot allocation and persistence. It reads and updates a local JSON file (Slots.json), randomly selects available slots within a threshold, translates numeric slot IDs into scaled string identifiers using custom mapping dictionaries, and maps in-memory records to active states with a built-in iteration failsafe.
+
+Tech Stack
+Language: ```Python```
+
+Dependencies: ```Standard Library (json, random)```
+
+Features: ```Custom integer-to-string scale conversion, randomized slot selection, iteration-based retry failsafe, JSON schema persistence mapping```
+
+Use case: ```Dynamic Memory Slotting, Local State Management, Lightweight JSON Database Mocking```
 
 
 Sample Schema:
